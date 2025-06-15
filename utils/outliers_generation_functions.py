@@ -143,7 +143,7 @@ def perturb_within_distribution(
     if save:
         folder_path = f'../../data/perturbed_datasets/{directory_name}'
         os.makedirs(folder_path, exist_ok=True)
-        filename = f'../../data/perturbed_datasets/{directory_name}/{key_word}_{round(pct_to_perturb*100)}.csv'
+        filename = f'../../data/perturbed_datasets/{directory_name}/{key_word}_{round(pct_to_perturb*100)}_pct.csv'
         modified_data.to_csv(filename, index=False)
 
     return modified_data, modified_idxs
@@ -225,7 +225,7 @@ def generate_around_outliers(
     if save:
         folder_path = f'../../data/generated_around_outliers/{directory_name}'
         os.makedirs(folder_path, exist_ok=True)
-        filename = f'../../data/generated_around_outliers/{directory_name}/{key_word}_{round(pct_to_enter*100)}.csv'
+        filename = f'../../data/generated_around_outliers/{directory_name}/{key_word}_{round(pct_to_enter*100)}_pct.csv'
         new_data.to_csv(filename, index=False)
 
     return new_data
